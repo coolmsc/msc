@@ -28,6 +28,28 @@ level: 7
 
 var map = new kakao.maps.Map(mapContainer, mapOption);
 
+var locations = [
+
+{title:"홍대점", lat:37.5563, lng:126.9220},
+
+{title:"망원점", lat:37.5560, lng:126.9010},
+
+{title:"합정점", lat:37.5490, lng:126.9130}
+
+];
+
+locations.forEach(function(loc){
+
+var markerPosition = new kakao.maps.LatLng(loc.lat, loc.lng);
+
+var marker = new kakao.maps.Marker({
+map: map,
+position: markerPosition
+});
+
+});
+
+
 </script>
 
 </body>
